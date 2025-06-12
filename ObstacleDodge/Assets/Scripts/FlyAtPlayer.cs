@@ -3,7 +3,7 @@ using UnityEngine;
 public class FlyAtPlayer : MonoBehaviour
 {
     [SerializeField] Transform player;
-    [SerializeField] float flySpeed = 0.01f;
+    [SerializeField] float flySpeed = 1f;
 
     Vector3 playerPosition;
     void Start()
@@ -13,6 +13,20 @@ public class FlyAtPlayer : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, playerPosition, flySpeed);
+        MoveTowardsPlayer();
+        DestroyWhenReached();
+    }
+
+    void DestroyWhenReached()
+    {
+        if(transform.position == playerPosition)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void MoveTowardsPlayer()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, playerPosition, Time.deltaTime * flySpeed);
     }
 }

@@ -1532,7 +1532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 306605672}
-  flySpeed: 0.01
+  flySpeed: 10
 --- !u!135 &1032844757
 SphereCollider:
   m_ObjectHideFlags: 0
