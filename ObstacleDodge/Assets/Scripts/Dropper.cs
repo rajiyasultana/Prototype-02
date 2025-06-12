@@ -2,18 +2,26 @@ using UnityEngine;
 
 public class Dropper : MonoBehaviour
 {
+    [SerializeField] float timeToWait = 2f;
+
+    MeshRenderer boxMeshRanderer;
+    Rigidbody boxRigidbody;
     void Start()
     {
+        boxMeshRanderer = GetComponent<MeshRenderer>();
+        boxRigidbody = GetComponent<Rigidbody>();
+        
+        boxMeshRanderer.enabled = false;
+        boxRigidbody.useGravity = false;
         
     }
 
     void Update()
     {
-        float time = Time.time;
-        Debug.Log(time);
-        if(time >= 3)
+        if(Time.time > timeToWait)
         {
-            GetComponent<Rigidbody>().useGravity = true;
+            boxMeshRanderer.enabled = true;
+            boxRigidbody.useGravity = true;
         }
     }
 }
