@@ -10,11 +10,5 @@ public class Score : MonoBehaviour
             Debug.Log("Your score is " + score);
             score++;
         }
-        else 
-        {
-            Debug.Log("Same box");
-        
-        }
-        
     }
 }
