@@ -1,10 +1,15 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class ObstacleHit : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision other)
     {
-        GetComponent<MeshRenderer>().material.color = Color.cyan;
-        
+        if (other.gameObject.tag == "Player")
+        {
+            GetComponent<MeshRenderer>().material.color = Color.cyan;
+            gameObject.tag = "Hit";
+        }
+
     }
 }
