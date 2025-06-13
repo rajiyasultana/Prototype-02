@@ -1532,6 +1532,10 @@ PrefabInstance:
       value: Trigger
       objectReference: {fileID: 0}
     - target: {fileID: 4661770161041042387, guid: f3eba5994324b90438105ed882bc2a48, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5196118
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661770161041042387, guid: f3eba5994324b90438105ed882bc2a48, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.45
       objectReference: {fileID: 0}
@@ -1748,7 +1752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6717176056695563566, guid: 1914aaac9d51d37489e5ec9b8ee12497, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
