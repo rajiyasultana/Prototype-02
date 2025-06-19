@@ -26,7 +26,7 @@ public class FlyAtPlayer : MonoBehaviour
     {
         if(transform.position == playerPosition)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
